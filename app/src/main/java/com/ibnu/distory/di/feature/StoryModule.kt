@@ -5,6 +5,6 @@ import com.ibnu.distory.data.resource.StoryDataSource
 import org.koin.dsl.module
 
 val storyModule = module {
-    factory { StoryRepository(get()) }
+    single { StoryRepository(get()) }
     single { StoryDataSource(get(), get()) }
 }

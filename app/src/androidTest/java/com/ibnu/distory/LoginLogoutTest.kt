@@ -27,7 +27,7 @@ import org.junit.runners.MethodSorters
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 class LoginLogoutTest {
 
-    lateinit var instrumentationContext: Context
+    private lateinit var instrumentationContext: Context
     private val email = "ibnubatutah001@gmail.com"
     private val password = "12345678"
 

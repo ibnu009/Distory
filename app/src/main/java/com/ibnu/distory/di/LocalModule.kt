@@ -10,7 +10,7 @@ import org.koin.dsl.module
 val localModule = module {
     single { provideAuthService(get()) }
 
-    factory { get<DistoryDatabase>().getStoryDao() }
+    single { get<DistoryDatabase>().getStoryDao() }
 
     fun provideDatabase(application: Application): DistoryDatabase {
         return Room.databaseBuilder(application, DistoryDatabase::class.java, BuildConfig.DB_NAME)
